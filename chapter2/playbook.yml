@@ -1,0 +1,15 @@
+---
+- hosts: app
+  become: true
+  
+  tasks:
+    - name: Ensure chrony is installed.
+      yum:
+        name: chrony
+        state: present
+
+    - name: Ensure chrony is running.
+      service:
+        name: chronyd
+        state: restarted
+        enabled: yes

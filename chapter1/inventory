@@ -1,0 +1,10 @@
+# Application servers
+[app]
+192.168.124.70	ansible_connection=ssh	ansible_user=fretagi ansible_ssh_pass=Iceman1964!
+192.168.124.47	ansible_connection=ssh	ansible_user=fretagi ansible_ssh_pass=Iceman1964!
+
+# Database servers
+[db]
+192.168.124.47	ansible_connection=ssh	ansible_user=fretagi ansible_ssh_pass=Iceman1964!
+192.168.124.243	ansible_connection=ssh	ansible_user=fretagi ansible_ssh_pass=Iceman1964!
+192.168.124.93	ansible_connection=ssh	ansible_user=fretagi ansible_ssh_pass=Iceman1964!
