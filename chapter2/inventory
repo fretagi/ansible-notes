@@ -1,0 +1,20 @@
+# Application servers
+[app]
+192.168.124.70	ansible_connection=ssh	ansible_user=fretagi 
+192.168.124.47	ansible_connection=ssh	ansible_user=fretagi 
+
+# Database servers
+[db]
+192.168.124.47	ansible_connection=ssh	ansible_user=fretagi 
+192.168.124.243	ansible_connection=ssh	ansible_user=fretagi 
+192.168.124.93	ansible_connection=ssh	ansible_user=fretagi 
+
+# Group 'multi' with all servers
+[multi:children]
+app
+db
+
+# Variables that will be applied to all servers
+[multi:vars]
+ansible_user=fretagi
+ansible_ssh_private_key_file=/home/fretagi/.ssh/ansible_demo
